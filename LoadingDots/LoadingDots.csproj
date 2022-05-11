@@ -14,9 +14,12 @@
 	<PropertyGroup>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<NoWin32Manifest>true</NoWin32Manifest>
-		<AssemblyVersion>1.0.0.4</AssemblyVersion>
-		<FileVersion>1.0.0.4</FileVersion>
-		<Version>1.0.4</Version>
+		<AssemblyVersion>1.0.1.6</AssemblyVersion>
+		<FileVersion>1.0.1.6</FileVersion>
+		<Version>1.1.6</Version>
+		<PackageProjectUrl>https://github.com/MichalKuracina/LoadingDots</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/MichalKuracina/LoadingDots</RepositoryUrl>
+		<PackageTags>console;writeline;parallel;thread;spinner</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>

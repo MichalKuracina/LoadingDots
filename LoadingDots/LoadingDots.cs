@@ -20,13 +20,13 @@ namespace LoadingDots
         private TimeSpan _elapsed;
         private bool _activeState;
 
-        public Dots(string action, int speed)
+        public Dots(string action)
         {
             _frame = 0;
             _originalCol = Console.CursorLeft;
             _originalRow = Console.CursorTop;
             _action = action;
-            _speed = speed;
+            _speed = 250;
             _activeState = false;
             _thread = new Thread(DoAction);
             _started = new DateTime();
@@ -61,7 +61,7 @@ namespace LoadingDots
 
         public TimeSpan Elapsed
         {
-            get => _elapsed = _ended.Subtract(_started);
+            get => _elapsed = DateTime.Now.Subtract(_started);
         }
 
         // METHODS
@@ -80,6 +80,17 @@ namespace LoadingDots
             Console.CursorVisible = true;
             _thread.Join();
             Console.SetCursorPosition(_originalCol, _originalRow); Console.Write($"{_action} OK ");
+            Console.WriteLine("");
+            Thread.Sleep(1000);
+        }
+
+        public void End(string message)
+        {
+            _ended = DateTime.Now;
+            _activeState = false;
+            Console.CursorVisible = true;
+            _thread.Join();
+            Console.SetCursorPosition(_originalCol, _originalRow); Console.Write($"{_action} {message} ");
             Console.WriteLine("");
             Thread.Sleep(1000);
         }
