@@ -34,6 +34,21 @@ namespace LoadingDots
             _elapsed = new TimeSpan();
         }
 
+        public Dots(string action, int speed)
+        {
+            _frame = 0;
+            _originalCol = Console.CursorLeft;
+            _originalRow = Console.CursorTop;
+            _action = action;
+            _speed = speed;
+            _activeState = false;
+            _thread = new Thread(DoAction);
+            _started = new DateTime();
+            _ended = new DateTime();
+            _elapsed = new TimeSpan();
+        }
+
+
         // PROPERTIES
         public string Action
         {

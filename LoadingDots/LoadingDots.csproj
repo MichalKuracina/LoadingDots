@@ -13,9 +13,9 @@
 
 	<PropertyGroup>
 		<NoWin32Manifest>true</NoWin32Manifest>
-		<AssemblyVersion>2.0.0.0</AssemblyVersion>
-		<FileVersion>2.0.0</FileVersion>
-		<Version>2.0.0</Version>
+		<AssemblyVersion>2.0.0.1</AssemblyVersion>
+		<FileVersion>2.0.1</FileVersion>
+		<Version>2.0.1</Version>
 		<PackageProjectUrl>https://github.com/MichalKuracina/LoadingDots</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/MichalKuracina/LoadingDots</RepositoryUrl>
 		<PackageTags>console;writeline;parallel;thread;spinner</PackageTags>
